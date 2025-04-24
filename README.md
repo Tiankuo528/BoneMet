@@ -271,3 +271,13 @@ from skimage import io
 ## License
 
 BoneMet has a [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) license.
+
+## Citation
+
+```
+@inproceedings{chubonemet,
+  title={BoneMet: An Open Large-Scale Multi-Modal Murine Dataset for Breast Tumor Bone Metastasis Diagnosis and Prognosis},
+  author={Chu, Tiankuo and Lin, Fudong and Wang, Shubo and Jiang, Jason and Gong, Wiley Jia-Wei and Yuan, Xu and Wang, Liyun},
+  booktitle={The Thirteenth International Conference on Learning Representations}
+}
+```
