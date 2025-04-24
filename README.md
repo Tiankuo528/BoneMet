@@ -14,6 +14,76 @@ The Breast Tumor Bone Metastasis (BoneMet) dataset, the first large-scale, publi
 
 - The `BoneMet` dataset is available at [Hugging Face](https://huggingface.co/datasets/BoneMet/BoneMet)
 
+### Dataset Structure
+
+
+```     
+        BoneMet
+
+        │-- MiceMediRec Dataset
+        │   └── record.csv
+        │
+        │-- Imagery_Dataset
+        │   │-- Rotation-X-ray
+        │   │   │-- 001
+        │   │   │   │-- week 0
+        │   │   │   │   ├── xray_1.PNG
+        │   │   │   │   └── xray_2.PNG
+        │   │   │   │-- week 1
+        │   │   │   │   ├── xray_1.PNG
+        │   │   │   │   └── xray_2.PNG
+        │   │   │-- 002
+        │   │       ...
+        │   │-- Recon-CT
+        │   │   │-- 001
+        │   │   │   │-- week 0
+        │   │   │   │   ├── ct_slice_001.PNG
+        │   │   │   │   └── ...
+        │   │   │   │-- week 1
+        │   │   │   │   ├── ct_slice_001.PNG
+        │   │   │   │   └── ...
+        │   │   │-- 002
+        │   │       ...
+        │   │-- Seg-CT
+        │   │   │-- 001 left tibia
+        │   │   │   │-- week 0
+        │   │   │   │   ├── segmented_ct_001.PNG
+        │   │   │   │   └── ...
+        │   │   │   │-- week 1
+        │   │   │   │   ├── segmented_ct_001.PNG
+        │   │   │   │   └── ...
+        │   │   │-- 001 right tibia
+        │   │   │   ...
+        │   │   │-- 002 left tibia
+        │   │       ...
+        │   │-- Regist-CT
+        │   │   │-- 001 left tibia
+        │   │   │   │-- week 0
+        │   │   │   │   ├── registered_ct_001.PNG
+        │   │   │   │   └── ...
+        │   │   │   │-- week 1
+        │   │   │   │   ├── registered_ct_001.PNG
+        │   │   │   │   └── ...
+        │   │   │-- 001 right tibia
+        │   │   │   ...
+        │   │   │-- 002 left tibia
+        │   │       ...
+        │   │-- ROI-CT
+        │       │-- 001L proximal tibia
+        │       │   │-- week 0
+        │       │   │   ├── ROI_ct_001.PNG
+        │       │   │   └── ...
+        │       │   │-- week 1
+        │       │   │   ├── ROI_ct_001.PNG
+        │       │   │   └── ...
+        │       │-- 001R proximal tibia
+        │       │   ...
+        │       │-- 002L proximal tibia
+        │           ...
+
+```
+
+
 #### The `BoneMet` package 
 
 - A Python package including three types of APIs: (1) CT Image Segmentation, (2) CT Image Registration, and (3) RoI-based CT Image Cropping at the Python Package Index(PyPI), for public release to facilitate our dataset’s ease access
@@ -21,16 +91,6 @@ The Breast Tumor Bone Metastasis (BoneMet) dataset, the first large-scale, publi
 - The `BoneMet` package is available at [Python Package Index (PyPI)](https://pypi.org/project/BoneMet)
 
 
-
-<!-- ## Tutorials
-
-The tutorials for the BoneMet dataset are available at Google Colab, with their links listed below
-
-- [Sentinel-2 Imagery Tutorial](https://colab.research.google.com/drive/1Tj69JdhO7aX8ks-4UWYvHrFm9GB1PNCd?usp=sharing)
-- [WRF-HRRR Computed Dataset Tutorial](https://colab.research.google.com/drive/14l-JSNHtelawNu3kVG_ukTd2WUJpaZEc?usp=sharing)
-
-- [USDA Crop Dataset Tutorial](https://colab.research.google.com/drive/1U-vFoRyLSb2l2Q67LeGbkUKTeRaHDkkK?usp=sharing)
- -->
 
 
 ## The BoneMet Dataset
