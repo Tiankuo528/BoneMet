@@ -14,7 +14,7 @@ The Breast Tumor Bone Metastasis (BoneMet) dataset, the first large-scale, publi
 
 - The `BoneMet` dataset is available at [Hugging Face](https://huggingface.co/datasets/BoneMet/BoneMet)
 
-### Dataset Structure
+#### Dataset Structure
 
 
 ```     
@@ -266,6 +266,28 @@ from skimage import io
     cropper.crop_roi(input_folder, output_folder, first_slice_selected, last_slice_selected, first_slice_below_tf_junction)
 ```
 
+# Using BoneMet with other Experiments
+
+We will be demonstrating how our dataset BoneMet can be used in other experiments, specifically reconstructing an x-ray with medNerf.
+
+
+## Loading the Dataset
+Begin by loading the BoneMet dataset. You can load the entire dataset with 
+```
+from datasets import load_dataset
+dataset = laod_dataset("BoneMet/BoneMet")
+```
+You can also specify certain directories if you only need a certain subset of the dataset. When reconstructing x-ray's with medNerf, we will only need x-ray data:
+```
+dataset = load_dataset("BoneMet/BoneMet", data_dir = "Imagery_Dataset/1. Rotation-X-ray/851/week 0")
+```
+The dataset will be cached in `C:\Users\<User>\.cache\huggingface\hub\datasets--BoneMet--BoneMet`. 
+## Using with MedNerf
+
+After downloading the dataset, open the `knee.yaml` file found in the configs folder. Change the `datadir` field to the file location of the downloaded dataset. Now, in the `graf-main` directory you can run the `train.py` file with BoneMet data. Use the following command to run the script.
+```
+python train.py ./configs/knee.yaml
+```
 
 
 ## License
